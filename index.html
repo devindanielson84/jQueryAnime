@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+
+<script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  $( function() {
+    var progressbar = $( "#progressbar" ),
+      progressLabel = $( ".progress-label" );
+ 
+    progressbar.progressbar({
+      value: false,
+      change: function() {
+        progressLabel.text( progressbar.progressbar( "value" ) + "%" );
+      },
+      complete: function() {
+        progressLabel.text( "Complete!" );
+      }
+    });
+ 
+    function progress() {
+      var val = progressbar.progressbar( "value" ) || 0;
+ 
+      progressbar.progressbar( "value", val + 2 );
+ 
+      if ( val < 99 ) {
+        setTimeout( progress, 80 );
+      }
+    }
+ 
+    setTimeout( progress, 2000 );
+  } );
+  </script>
+    <style>
+      body {
+        font-family: 'Cinzel', serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color:black;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: white;
+  color: black;
+}
+
+      .box1{
+        border: solid  5px white;
+        transition: height 2s;
+      }
+      .box2{
+        border: solid  5px white;
+        transition: height 2s;
+      }
+      .box3{
+        border: solid  5px white;
+        transition: height 2s;
+      }
+
+      .box1:hover{
+        height: 350px;
+      }
+      .box2:hover{
+        height: 350px;
+      }
+      .box3:hover{
+        height: 350px;
+      }
+
+        .item1{
+
+            color: white;
+            margin-left: 275px;
+        }
+        .item2{
+
+            color: white;
+            margin-left: 275px;
+        }
+        .text{
+            text-align: center;
+            color: white;
+        }
+        .animehaven{
+          background-image: linear-gradient(black, white);
+            border: solid  40px;
+            border-image: url(manga\ border.jpg) 30 round;
+        }
+        .ui-progressbar {
+    position: relative;
+  }
+  .progress-label {
+    position: absolute;
+    left: 50%;
+    top: 4px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+  }
+  .moreanime{
+    transition: width 2s;
+    filter: brightness(55%);
+    box-shadow: 10px 0px 15px white;
+    border: solid  5px black;
+    
+  }
+  .moreanime:hover{
+    width: 290px;
+  }
+
+  .foot{
+    margin-left: 600px;
+  }
+  .date{
+    color:white;
+  }
+  .ui-progressbar {
+    position: relative;
+  }
+  .progress-label {
+    position: absolute;
+    left: 50%;
+    top: 4px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+  }
+    </style>
+</head>
+<body class="animehaven">
+      <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#AnimeLibary">Anime Libary</a>
+        <a href="merch">Merch</a>
+        <a href="#about">Information/About</a>
+        <p class="date">Date: <input type="text" id="datepicker"></p>
+        <div id="progressbar"><div class="progress-label">Loading...</div></div>
+      </div>
+        <h1 class="text">Anime Haven</h1>
+        <h3 class="text">top 3 trending anime</h3>
+        <div class="item1">
+          <img  class="box1" src="jjk.jpg" alt="" height="293px">
+          <img class="box2" src="attackontitian.jpg" alt=""height="293px">
+          <img class="box3" src="demonslayer.jpg" alt="" height="293px">
+          <img class="moreanime" src="anime.jpg" alt="" width="193px" height="293px" >
+        </div> 
+    </div>
+    <br/>
+    <div>
+      <h3 class="text">top 3 anime that give you a taste of terror </h3>
+      <div class="item2">
+        <img class="box1"  src="deathnote.png" alt="" height="293px">
+        <img class="box2" src="thepromisedneverland.jpg" alt=""height="293px">
+        <img class="box3" src="toykoghoul.jpg" alt="" height="293px">
+        <img class="moreanime" src="fear.jpg" alt="" width="193px" height="293px">
+      </div>  
+
+      <div>
+        <h3 class="text">top 3 anime that give you a slice of life</h3>
+        <div class="item2">
+          <img class="box1" src="fruitsbasket.png" alt="" height="293px">
+          <img class="box2" src="saiki.jpg" alt=""height="293px">
+          <img class="box3" src="foodwars.jpg" alt="" height="293px">
+          <img class="moreanime" src="haikyuu.jpg" alt="" width="193px" height="293px">
+        </div>  
+  </div>
+  <br/>
+  <div id="accordion">
+    <h3>anime intro</h3>
+    <div>
+      <p>
+        Anime (Japanese: アニメ) is hand-drawn and computer animation originating from Japan. In Japan and in Japanese, anime (a term derived from the English word animation) describes all animated works, regardless of style or origin. However, outside of Japan and in English, anime is colloquial for Japanese animation and refers specifically to animation produced in Japan.Animation produced outside of Japan with similar style to Japanese animation is referred to as anime-influenced animation.
+      </p>
+    </div>
+    <h3>when it was invented</h3>
+    <div>
+      <p>
+        he earliest commercial Japanese animations date to 1917. A characteristic art style emerged in the 1960s with the works of cartoonist Osamu Tezuka and spread in following decades, developing a large domestic audience. Anime is distributed theatrically, through television broadcasts, directly to home media, and over the Internet. In addition to original works, anime are often adaptations of Japanese comics (manga), light novels, or video games. It is classified into numerous genres targeting various broad and niche audiences.
+      </p>
+    </div>
+    <h3>a little bit about character design</h3>
+    <div>
+      <p>
+        The body proportions of human anime characters tend to accurately reflect the proportions of the human body in reality. The height of the head is considered by the artist as the base unit of proportion. Head heights can vary, but most anime characters are about seven to eight heads tall. Anime artists occasionally make deliberate modifications to body proportions to produce super deformed characters that feature a disproportionately small body compared to the head; many super deformed characters are two to four heads tall. Some anime works like Crayon Shin-chan completely disregard these proportions, in such a way that they resemble caricatured Western cartoons. some notable anime characters are listed below
+      </p>
+      <ul>
+        <li>goku</li>
+        <li>luffy</li>
+        <li>ichigo</li>
+      </ul>
+    </div>
+    <h3>Section 4</h3>
+    <div>
+      <p>
+      Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+      et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+      faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+      mauris vel est.
+      </p>
+      <p>
+      Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+      inceptos himenaeos.
+      </p>
+    </div>
+  </div>
+   
+  <br/>
+  <footer class="foot"><p>copyright est.2022 A/H</p></footer>
+</body>
+</html>
